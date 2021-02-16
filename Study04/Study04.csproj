@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Fonts\KoPubWorld Batang Bold.ttf" />
+    <None Remove="Fonts\KoPubWorld Batang Light.ttf" />
+    <None Remove="Fonts\KoPubWorld Batang Medium.ttf" />
+    <None Remove="Fonts\KoPubWorld Dotum Bold.ttf" />
+    <None Remove="Fonts\KoPubWorld Dotum Light.ttf" />
+    <None Remove="Fonts\KoPubWorld Dotum Medium.ttf" />
+    <None Remove="Images\Logo\icon.ico" />
+    <None Remove="Images\Logo\logo-small.png" />
+    <None Remove="Images\Logo\logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="Styles\Buttons.xaml" />
+    <Page Remove="Styles\Colors.xaml" />
+    <Page Remove="Styles\Fonts.xaml" />
+    <Page Remove="Styles\Texts.xaml" />
+    <Page Remove="Styles\Windows.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Fonts\KoPubWorld Batang Bold.ttf" />
+    <Resource Include="Fonts\KoPubWorld Batang Light.ttf" />
+    <Resource Include="Fonts\KoPubWorld Batang Medium.ttf" />
+    <Resource Include="Fonts\KoPubWorld Dotum Bold.ttf" />
+    <Resource Include="Fonts\KoPubWorld Dotum Light.ttf" />
+    <Resource Include="Fonts\KoPubWorld Dotum Medium.ttf" />
+    <Resource Include="Images\Logo\icon.ico" />
+    <Resource Include="Images\Logo\logo-small.png" />
+    <Resource Include="Images\Logo\logo.png" />
+    <Resource Include="Styles\Buttons.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Styles\Colors.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Styles\Fonts.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="Styles\Texts.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Styles\Windows.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BluePope.Lib\BluePope.Lib.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,25 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Study04">
+
+    <!--폰트 이름은 #폰트명으로 해야함 파일명 아님! -->
+    <FontFamily x:Key="KopubDotumBold">pack://application;,,,/Fonts/#KoPubWorld돋움체 Bold</FontFamily>
+    <FontFamily x:Key="KopubDotumMedium">pack://application;,,,/Fonts/#KoPubWorld돋움체 Medium</FontFamily>
+    <FontFamily x:Key="KopubDotumLight">pack://application;,,,/Fonts/#KoPubWorld돋움체 Light</FontFamily>
+
+    <Style TargetType="{x:Type Control}" x:Key="BaseStyle">
+        <Setter Property="FontFamily" Value="{StaticResource KopubDotumBold}" />
+    </Style>
+
+    <Style TargetType="{x:Type TextBlock}" x:Key="BaseTextBlockStyle">
+        <Setter Property="FontFamily" Value="{StaticResource KopubDotumBold}" />
+    </Style>
+    
+    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource BaseStyle}" />
+    <Style TargetType="{x:Type Label}" BasedOn="{StaticResource BaseStyle}" />
+    <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource BaseStyle}" />
+    <Style TargetType="{x:Type ListView}" BasedOn="{StaticResource BaseStyle}" />
+
+    <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlockStyle}" />
+
+</ResourceDictionary>
